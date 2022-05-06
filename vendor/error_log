@@ -1,0 +1,1 @@
+[15-May-2020 05:59:11 UTC] PHP Warning:  is_readable(): Unable to find the wrapper &quot;expect&quot; - did you forget to enable it when you configured PHP? in /home/oficinaprosud/oficinaprosud/public/vendor/SpreadsheetReader.php on line 42

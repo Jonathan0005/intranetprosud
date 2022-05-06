@@ -1,0 +1,8 @@
+[15-May-2020 05:47:25 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 16
+[15-May-2020 05:47:25 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 66
+[15-May-2020 05:49:54 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 16
+[15-May-2020 05:49:54 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 66
+[17-Jan-2022 23:31:43 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 16
+[17-Jan-2022 23:31:43 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 66
+[26-Jan-2022 22:25:54 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 16
+[26-Jan-2022 22:25:54 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/oficinaprosud/oficinaprosud/public/views/pdf/reporte.php on line 66

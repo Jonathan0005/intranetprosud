@@ -1,0 +1,4 @@
+[03-Feb-2022 00:21:43 UTC] PHP Warning:  require(../database/database_1.php): failed to open stream: No such file or directory in /home/oficinaprosud/oficinaprosud/public/views/build/generadorFirma.php on line 6
+[03-Feb-2022 00:21:43 UTC] PHP Fatal error:  require(): Failed opening required '../database/database_1.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/oficinaprosud/oficinaprosud/public/views/build/generadorFirma.php on line 6
+[15-Feb-2022 18:32:42 UTC] PHP Warning:  require(../database/database_1.php): failed to open stream: No such file or directory in /home/oficinaprosud/oficinaprosud/public/views/build/generadorFirma.php on line 6
+[15-Feb-2022 18:32:42 UTC] PHP Fatal error:  require(): Failed opening required '../database/database_1.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/oficinaprosud/oficinaprosud/public/views/build/generadorFirma.php on line 6

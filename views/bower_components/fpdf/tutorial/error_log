@@ -1,0 +1,20 @@
+[03-Mar-2022 03:17:43 UTC] PHP Warning:  fopen(logo_pb.png): failed to open stream: No such file or directory in /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php on line 1259
+[03-Mar-2022 03:17:43 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Can't open image file: logo_pb.png' in /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php(1261): FPDF->Error('Can't open imag...')
+#1 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php(885): FPDF->_parsepng('logo_pb.png')
+#2 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/tutorial/tuto2.php(10): FPDF->Image('logo_pb.png', 10, 8, 33)
+#3 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php(334): PDF->Header()
+#4 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/tutorial/tuto2.php(36): FPDF->AddPage()
+#5 {main}
+  thrown in /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php on line 271
+[04-Mar-2022 03:27:58 UTC] PHP Warning:  fopen(logo_pb.png): failed to open stream: No such file or directory in /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php on line 1259
+[04-Mar-2022 03:27:58 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Can't open image file: logo_pb.png' in /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php(1261): FPDF->Error('Can't open imag...')
+#1 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php(885): FPDF->_parsepng('logo_pb.png')
+#2 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/tutorial/tuto2.php(10): FPDF->Image('logo_pb.png', 10, 8, 33)
+#3 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php(334): PDF->Header()
+#4 /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/tutorial/tuto2.php(36): FPDF->AddPage()
+#5 {main}
+  thrown in /home/oficinaprosud/oficinaprosud/public/views/bower_components/fpdf/fpdf.php on line 271
