@@ -1,9 +1,9 @@
 <?php
 
-$server = 'localhost';
+$server = 'prosud.cl';
 $username = 'root';
-$password = '';
-$database = 'oficinaprosud_appsprosud';
+$password = 'Masofejo.88';
+$database = 'appsprosud_test';
 
 try {
 
