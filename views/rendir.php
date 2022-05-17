@@ -166,6 +166,9 @@ header("Location: ../index.php");
                   <label for="exampleInputFile">Subir Foto</label>
                   <input type="file" id="fileupload" class="fu" name="fileupload"  accept="image/*">
                   <button type="button" id="upload"><i class="fa fa-fw fa-upload"></i> Subir</button>
+                  <div id="loader" name="loader">
+                  <img id="loader-gif" src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="" width="1%" />
+                  </div>
                 </div>
                 </div>
               </div>
@@ -314,9 +317,10 @@ header("Location: ../index.php");
 </script>
 </body>
 </html>
+
 <script>
     $(document).ready(function() {
-      
+      $("#loader").hide();
       var dataTable = $('#fotos_grid').DataTable( {
           "bPaginate": false,
           "bFilter": false,
@@ -357,6 +361,7 @@ header("Location: ../index.php");
   let count = 0;
   var foto_nombre= "";
   $('#upload').on('click', function() {
+    $("#loader").show();
     var file_data = $('#fileupload').prop('files')[0];   
     var fileValue = $('#fileupload').prop('files')[0].name; 
     var form_data = new FormData();
@@ -382,6 +387,7 @@ header("Location: ../index.php");
                             html += "<td><button type='button' name='remove' data-row='row"+count+"' class='btn btn-danger btn-xs remove'>Eliminar</button> <a href='../imagenes_rindepro/"+foto_nombre+"' target='_blank' type='button' name='ver_imagen' class='btn btn-success btn-xs'>Ver Imagen</a></td>"; 
                             html += '</tr>';
                             $('#fotos_grid tbody').prepend(html);
+                            $("#loader").hide();
         }
      });
 
