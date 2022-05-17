@@ -289,6 +289,7 @@ header("Location: ../index.php");
             }
             },
             responsive: true,
+            scrollX: true,
             columnDefs: [
                 { responsivePriority: 1, targets: 0 },
                 { responsivePriority: 2, targets: 5 },

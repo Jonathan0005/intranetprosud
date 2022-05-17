@@ -144,17 +144,6 @@ header("Location: ../index.php");
 								</div>
 								<div class="col-md-3 col-sm-6 col-xs-12"> </div>
 							</div>
-							<div class="row">
-								<div class="col-md-4">
-									<div class="form-group"> <label>Filtrar por Fecha</label> <input type="text" class="form-control" id="bfecha" onkeyup="filter_fecha()" placeholder="Buscar..."> </div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group"> <label>Filtrar por Cuenta Contable</label> <input type="text" class="form-control" id="bccontable" onkeyup="filter_ccontable()" placeholder="Buscar..."> </div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group"> <label>Filtrar por Tipo de Doc </label> <input type="text" class="form-control" id="btdoc" onkeyup="filter_tdoc()" placeholder="Buscar..."> </div>
-								</div>
-							</div>
                         <div class ="row">
 							<div class="col-md-12">
 								<table id="tbl_rendiciones" class="responsive display nowrap" cellspacing="0" width="100%">
@@ -307,8 +296,26 @@ header("Location: ../index.php");
 		$(document).ready(function() {
 		
 		var dataTable = $('#tbl_rendiciones').DataTable( {
-          
+				"language":{
+					"processing": "Procesando...",
+					"lengthMenu": "Mostrar _MENU_ registros",
+					"zeroRecords": "No se encontraron resultados",
+					"emptyTable": "Ningún dato disponible en esta tabla",
+					"info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+					"infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+					"infoFiltered": "(filtrado de un total de _MAX_ registros)",
+					"search": "Buscar:",
+					"infoThousands": ",",
+					"loadingRecords": "Cargando...",
+					"paginate": {
+						"first": "Primero",
+						"last": "Último",
+						"next": "Siguiente",
+						"previous": "Anterior"
+				}
+			},
                   "responsive": true, 
+				  "scrollX": true,
 				  "columnDefs": [
 		            { responsivePriority: 1, targets: 0 },
 		            { responsivePriority: 2, targets: 5 }
@@ -324,69 +331,4 @@ header("Location: ../index.php");
 		});
 		
 	</script>
-	<script>
-		function filter_fecha() {
-		  // Declare variables
-		  var input, filter, table, tr, td, i, txtValue;
-		  input = document.getElementById("bfecha");
-		  filter = input.value.toUpperCase();
-		  table = document.getElementById("tbl_rendiciones");
-		  tr = table.getElementsByTagName("tr");
-		
-		  // Loop through all table rows, and hide those who don't match the search query
-		  for (i = 0; i < tr.length; i++) {
-		    td = tr[i].getElementsByTagName("td")[1];
-		    if (td) {
-		      txtValue = td.textContent || td.innerText;
-		      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-		        tr[i].style.display = "";
-		      } else {
-		        tr[i].style.display = "none";
-		      }
-		    }
-		  }
-		}
-		function filter_ccontable() {
-		  // Declare variables
-		  var input, filter, table, tr, td, i, txtValue;
-		  input = document.getElementById("bccontable");
-		  filter = input.value.toUpperCase();
-		  table = document.getElementById("tbl_rendiciones");
-		  tr = table.getElementsByTagName("tr");
-		
-		  // Loop through all table rows, and hide those who don't match the search query
-		  for (i = 0; i < tr.length; i++) {
-		    td = tr[i].getElementsByTagName("td")[2];
-		    if (td) {
-		      txtValue = td.textContent || td.innerText;
-		      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-		        tr[i].style.display = "";
-		      } else {
-		        tr[i].style.display = "none";
-		      }
-		    }
-		  }
-		}
-		function filter_tdoc() {
-		  // Declare variables
-		  var input, filter, table, tr, td, i, txtValue;
-		  input = document.getElementById("btdoc");
-		  filter = input.value.toUpperCase();
-		  table = document.getElementById("tbl_rendiciones");
-		  tr = table.getElementsByTagName("tr");
-		
-		  // Loop through all table rows, and hide those who don't match the search query
-		  for (i = 0; i < tr.length; i++) {
-		    td = tr[i].getElementsByTagName("td")[3];
-		    if (td) {
-		      txtValue = td.textContent || td.innerText;
-		      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-		        tr[i].style.display = "";
-		      } else {
-		        tr[i].style.display = "none";
-		      }
-		    }
-		  }
-		}
-		
-	</script>
+	
