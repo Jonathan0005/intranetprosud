@@ -167,13 +167,16 @@ header("Location: ../index.php");
                   <input type="file" id="fileupload" class="fu" name="fileupload"  accept="image/*">
                   <button type="button" id="upload"><i class="fa fa-fw fa-upload"></i> Subir</button>
                   <div id="loader" name="loader">
-                  <img id="loader-gif" src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="" width="1%" />
+                  <img id="loader-gif" src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="" width="10%" />
+                  </div>
+                  <div id="loader2" name="loader">
+                  <img id="loader-gif" src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="" width="2%" />
                   </div>
                 </div>
                 </div>
               </div>
               <div class="form-group">
-              <table id="fotos_grid" class="table table-bordered table-striped">  
+              <table id="fotos_grid" class="table table-bordered table-striped" width="100%">  
                                      <thead>
                                         <tr>
                                         <th>N°</th>
@@ -321,6 +324,7 @@ header("Location: ../index.php");
 <script>
     $(document).ready(function() {
       $("#loader").hide();
+      $("#loader2").hide();
       var dataTable = $('#fotos_grid').DataTable( {
           "bPaginate": false,
           "bFilter": false,
@@ -361,12 +365,18 @@ header("Location: ../index.php");
   let count = 0;
   var foto_nombre= "";
   $('#upload').on('click', function() {
-    $("#loader").show();
+    
     var file_data = $('#fileupload').prop('files')[0];   
     var fileValue = $('#fileupload').prop('files')[0].name; 
     var form_data = new FormData();
     let file_change;                  
-    form_data.append('file', file_data);                         
+    form_data.append('file', file_data);
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $("#loader").show(); }
+    else 
+    {
+      $("#loader2").show();
+    }                      
     $.ajax({
         url: '../controller/uploader.php', // <-- point to server-side PHP script 
         dataType: 'text',  // <-- what to expect back from the PHP script, if anything
@@ -384,10 +394,20 @@ header("Location: ../index.php");
                             let html = "<tr id='row"+count+"'>";
                             html += "<td id='data1' readonly='readonly' class='numero'>"+count+"</td>";
                             html += "<td id='data2' readonly='readonly' class='foto_link'>"+foto_nombre+"</a></td>";
-                            html += "<td><button type='button' name='remove' data-row='row"+count+"' class='btn btn-danger btn-xs remove'>Eliminar</button> <a href='../imagenes_rindepro/"+foto_nombre+"' target='_blank' type='button' name='ver_imagen' class='btn btn-success btn-xs'>Ver Imagen</a></td>"; 
+                            html += "<td><button type='button' name='remove' data-row='row"+count+"' class='btn btn-danger btn-xs remove'><i class='fa fa-fw fa-trash'></i></button> <a href='../imagenes_rindepro/"+foto_nombre+"' target='_blank' type='button' name='ver_imagen' class='btn btn-success btn-xs'><i class='fa fa-fw fa-image'></i></a></td>"; 
                             html += '</tr>';
                             $('#fotos_grid tbody').prepend(html);
-                            $("#loader").hide();
+                            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                            $("#loader").hide(); }
+                            else 
+                            {
+                              $("#loader2").hide();
+                            }
+                            Swal.fire(
+                              'Excelente',
+                              'Foto agregada correctamente!',
+                              'success'
+                            )
         }
      });
 
