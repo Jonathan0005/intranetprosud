@@ -7,6 +7,12 @@ require './database/database_1.php';
 $usuario_ = $_POST['campo_usuario'];
 $pass = $_POST['campo_pass'];
 
+$query_alerta = "select alerta_flag, alerta_texto from tbl_alertas_prosud"; 
+$r_alertas = mysqli_query($conn, $query_alerta);
+$row_alertas=mysqli_fetch_row($r_alertas);
+$flag = $row_alertas[0];   
+$texto = $row_alertas[1]; 
+
 if(!empty($usuario_) && !empty($pass)) {
   $query = "SELECT u.RUT, u.email , u.CodEmpleado , a.IdPerfil , u.password , concat(u.nombre,' ',u.apellido_p) as user_nom ,p.NombrePerfil , u.usuario FROM users as u INNER JOIN tbl_perfil_usuario as a on u.RUT  = a.IdRut  INNER JOIN tbl_perfil p on a.IdPerfil = p.IdPerfil WHERE u.usuario = '$usuario_' and u.password = '$pass' LIMIT 1 ";
   $results = mysqli_query($conn, $query);
@@ -25,6 +31,8 @@ if(!empty($usuario_) && !empty($pass)) {
 
 
   }
+
+
     if (!empty($valida_id) && $usuario_ = $usuario && $pass = $valida_pass  ) {
   $_SESSION['user_id'] = $valida_id;
 	$_SESSION['codigo'] = $codigo;
@@ -165,14 +173,13 @@ if(!empty($usuario_) && !empty($pass)) {
             <div class="modal-dialog modal-login">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Noticias</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Alertas Prosud</h4>
                     </div>
                     <div class="modal-body">
 
-    <p><b>Servicios no Disponibles.</b> Estimados, informamos que no tenemos disponibilidad de los servicios de Metas. Debido a que tenemos una incidencia en la conexion de nuestras bases de datos. Estaremos notificando cuando los servicios se encuentren disponibles nuevamente.                      </p>
+    <p><b>Alertas</b></p>
+    <p><?php echo $texto; ?></p>
 
-<p>Saludos.</p>
                     </div>
                     <div class="modal-footer">Tienes alguna consulta? Envianos un correo <a href="mailto:sos@prosud.cl">Mail IT Prosud</a></div>
                 </div>
@@ -185,6 +192,10 @@ if(!empty($usuario_) && !empty($pass)) {
 </html>
 <script>
 $( document ).ready(function() {
- // $('#myModal').modal('toggle')
+  var flag = "<?php echo $flag; ?>";
+  if(flag == "1")
+  {
+  $('#myModal').modal('toggle')
+  }
 });
 </script>
