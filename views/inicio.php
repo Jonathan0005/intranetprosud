@@ -142,12 +142,12 @@ header("Location: ../index.php");
         <div class='row'>
        
 
-        <div class='col-xs-4 col-sm-2'><a href="http://portal.office.com/" target="_blank"><img onmouseover="this.src='imgh/9.jpg';" onmouseout="this.src='img/9.jpg';" src="img/9.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="https://www.office.com/?auth=2" target="_blank"><img onmouseover="this.src='imgh/9.jpg';" onmouseout="this.src='img/9.jpg';" src="img/9.jpg" id="pequeña2"></a></div>
         <div class='col-xs-4 col-sm-2'><a href="https://prosudsa.sharepoint.com/sites/InfoPRO/Documentos%20compartidos/Forms/AllItems.aspx" target="_blank" ><img onmouseover="this.src='imgh/17.jpg';" onmouseout="this.src='img/17.jpg';" src="img/17.jpg" id="pequeña2"></a></div>
         <div class="col-xs-4 col-sm-2"><a href="https://www.instoreview.cl" target="_blank"><img onmouseover="this.src='imgh/11.jpg';" onmouseout="this.src='img/11.jpg';" src="img/11.jpg" id="pequeña2"></a></div>
         <div class='col-xs-4 col-sm-2'><a href="http://wms.prosud.cl" target="_blank" ><img onmouseover="this.src='imgh/12.jpg';" onmouseout="this.src='img/12.jpg';" src="img/12.jpg" id="pequeña2"></a></div>
         <div class='col-xs-4 col-sm-2'><a href="http://gestiondocumental.prosud.cl/" target="_blank" ><img onmouseover="this.src='imgh/13.jpg';" onmouseout="this.src='img/13.jpg';" src="img/13.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="https://prosud.agilepromoter.com" target="_blank" ><img onmouseover="this.src='imgh/14.jpg';" onmouseout="this.src='img/14.jpg';" src="img/14.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="https://prosud.involves.com/login/#/" target="_blank" ><img onmouseover="this.src='imgh/14.jpg';" onmouseout="this.src='img/14.jpg';" src="img/14.jpg" id="pequeña2"></a></div>
         </div>
         <div class='row'>
         <div class='col-xs-4 col-sm-2'><a href="https://forms.office.com/r/4TwDuQPLHm" target="_blank" ><img onmouseover="this.src='imgh/18.png';" onmouseout="this.src='img/18.png';" src="img/18.png" id="pequeña2"></a></div>
