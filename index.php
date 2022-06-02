@@ -41,6 +41,7 @@ if(!empty($usuario_) && !empty($pass)) {
 	$_SESSION['nomperfil'] = $nomperfil;
 	$_SESSION['usuario'] = $usuario ;
 	$_SESSION['valida_pass'] = $valida_pass ;
+  echo $nomperfil;
 
     header("Location: ./views/inicio.php");
     } else {

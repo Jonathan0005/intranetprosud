@@ -18,6 +18,12 @@ error_reporting(-1);
 
       $row=mysqli_fetch_row($results);
       $user = $row[0];    
+
+      $query_alerta = "select alerta_flag, alerta_texto from tbl_alertas_prosud"; 
+      $r_alertas = mysqli_query($conn, $query_alerta);
+      $row_alertas=mysqli_fetch_row($r_alertas);
+      $flag = $row_alertas[0];   
+      $texto = $row_alertas[1]; 
 }
 else 
 {
@@ -102,15 +108,15 @@ header("Location: ../index.php");
               <form role="form">
               <div class="checkbox">
                 <label>
-                <input type="checkbox">
+                <input type="checkbox" id="activar">
                 Activar Alertas
                 </label>
                 </div>
                 <div class="form-group">
                 <label>Ingresa tus alertas</label>
-                <textarea class="form-control" rows="3" placeholder="Ingresa tu texto ..."></textarea>
+                <textarea class="form-control" rows="3" placeholder="Ingresa tu texto ..." id ="texto"><?php echo $texto;?></textarea>
                 </div>
-                <button type="button" class="btn btn-block btn-primary"> <i class="fa fa-fw fa-save"></i> Guardar</button>
+                <button type="button" class="btn btn-block btn-primary" id="save"> <i class="fa fa-fw fa-save"></i> Guardar</button>
                 </form>         
               </div>
             </div>         
@@ -151,6 +157,7 @@ header("Location: ../index.php");
 
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
@@ -165,3 +172,40 @@ header("Location: ../index.php");
         
 </body>
 </html>
+<script>
+  $( document ).ready(function() {
+    var fl = "<?php echo $flag; ?>";
+    if(fl == "1"){
+      $('#activar').prop('checked', true);
+    }else
+    {
+      $('#activar').prop('checked', false);
+    }
+});
+  </script>
+
+<script> 
+$("#save").click(function(){
+var texto = $('textarea#texto').val();
+var flag_t = 0;
+if ($('#activar').is(':checked'))
+  {
+    flag_t = 1;
+  }
+  $.ajax({
+                    url:'../controller/setAlertas.php',
+                    method:'POST',
+                    data:{
+                      flag_t:flag_t, texto:texto
+                    },
+                   success:function(data){
+                    Swal.fire(
+                      'Good job!',
+                      'You clicked the button!',
+                      'success'
+                    )
+                   }    
+                });  
+
+});
+</script>
