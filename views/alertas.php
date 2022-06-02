@@ -200,8 +200,8 @@ if ($('#activar').is(':checked'))
                     },
                    success:function(data){
                     Swal.fire(
-                      'Good job!',
-                      'You clicked the button!',
+                      'Buen Trabajo!',
+                      'Alerta Agregada Correctamente!',
                       'success'
                     )
                    }    
