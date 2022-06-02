@@ -131,27 +131,28 @@ header("Location: ../index.php");
     <section class="content">
       <div class=''>
 
-	<div class='row'>
-		    <div class="col-xs-4 col-sm-2"><a href="http://190.196.131.250/ProcesosProsud/Vista/Home.aspx?username=<?php echo  $usuario ?>&password=<?php echo  $valida_pass ?>" target="_blank"><img onmouseover="this.src='imgh/1.jpg';" onmouseout="this.src='img/1.jpg';" src="img/1.jpg" id="pequeña2"></a></div>
+	<div class='row'>		    
         <div class='col-xs-4 col-sm-2'><a href="https://talana.com/es/acceso-a-portal-del-trabajador" target="_blank"><img onmouseover="this.src='imgh/2.jpg';" onmouseout="this.src='img/2.jpg';" src="img/2.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="http://prosudmarket.cl" target="_blank"><img onmouseover="this.src='imgh/16.jpg';" onmouseout="this.src='img/16.jpg';" src="img/16.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="rendir.php"><img onmouseover="this.src='imgh/19.png';" onmouseout="this.src='img/19.png';" src="img/19.png" id="pequeña2"></a></div>
         <div class='col-xs-4 col-sm-2'><a href="http://www.ventasprosud.cl" target="_blank"><img onmouseover="this.src='imgh/4.jpg';" onmouseout="this.src='img/4.jpg';" src="img/4.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="http://beneficios.prosud.cl"><img onmouseover="this.src='imgh/5.jpg';" onmouseout="this.src='img/5.jpg';" src="img/5.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="http://productos.prosud.cl" target="_blank"><img onmouseover="this.src='imgh/6.jpg';" onmouseout="this.src='img/6.jpg';" src="img/6.jpg" id="pequeña2"></a></div>
-        </div>
-        <div class='row'>
-        <div class='col-xs-4 col-sm-2'><a href="https://www.hcmfront.com/signin/" target="_blank"><img onmouseover="this.src='imgh/7.jpg';" onmouseout="this.src='img/7.jpg';" src="img/7.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="http://prosudmarket.cl" target="_blank"><img onmouseover="this.src='imgh/16.jpg';" onmouseout="this.src='img/16.jpg';" src="img/16.jpg" id="pequeña2"></a></div>
         <div class='col-xs-4 col-sm-2'><a href="http://mundopro.prosud.cl" target="_blank"><img onmouseover="this.src='imgh/8.jpg';" onmouseout="this.src='img/8.jpg';" src="img/8.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="http://portal.office.com/" target="_blank"><img onmouseover="this.src='imgh/9.jpg';" onmouseout="this.src='img/9.jpg';" src="img/9.jpg" id="pequeña2"></a></div>
-        <div class="col-xs-4 col-sm-2"><a href="https://www.instoreview.cl" target="_blank"><img onmouseover="this.src='imgh/11.jpg';" onmouseout="this.src='img/11.jpg';" src="img/11.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="https://wms.prosud.cl" target="_blank" ><img onmouseover="this.src='imgh/12.jpg';" onmouseout="this.src='img/12.jpg';" src="img/12.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="http://gestiondocumental.prosud.cl/" target="_blank" ><img onmouseover="this.src='imgh/13.jpg';" onmouseout="this.src='img/13.jpg';" src="img/13.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="https://www.hcmfront.com/signin/" target="_blank"><img onmouseover="this.src='imgh/7.jpg';" onmouseout="this.src='img/7.jpg';" src="img/7.jpg" id="pequeña2"></a></div>
         </div>
         <div class='row'>
-        <div class='col-xs-4 col-sm-2'><a href="https://prosud.agilepromoter.com" target="_blank" ><img onmouseover="this.src='imgh/14.jpg';" onmouseout="this.src='img/14.jpg';" src="img/14.jpg" id="pequeña2"></a></div>
-        <div class='col-xs-4 col-sm-2'><a href="https://app.relojcontrol.com" target="_blank" ><img onmouseover="this.src='imgh/15.jpg';" onmouseout="this.src='img/15.jpg';" src="img/15.jpg" id="pequeña2"></a></div>
+       
+
+        <div class='col-xs-4 col-sm-2'><a href="http://portal.office.com/" target="_blank"><img onmouseover="this.src='imgh/9.jpg';" onmouseout="this.src='img/9.jpg';" src="img/9.jpg" id="pequeña2"></a></div>
         <div class='col-xs-4 col-sm-2'><a href="https://prosudsa.sharepoint.com/sites/InfoPRO/Documentos%20compartidos/Forms/AllItems.aspx" target="_blank" ><img onmouseover="this.src='imgh/17.jpg';" onmouseout="this.src='img/17.jpg';" src="img/17.jpg" id="pequeña2"></a></div>
+        <div class="col-xs-4 col-sm-2"><a href="https://www.instoreview.cl" target="_blank"><img onmouseover="this.src='imgh/11.jpg';" onmouseout="this.src='img/11.jpg';" src="img/11.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="http://wms.prosud.cl" target="_blank" ><img onmouseover="this.src='imgh/12.jpg';" onmouseout="this.src='img/12.jpg';" src="img/12.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="http://gestiondocumental.prosud.cl/" target="_blank" ><img onmouseover="this.src='imgh/13.jpg';" onmouseout="this.src='img/13.jpg';" src="img/13.jpg" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="https://prosud.agilepromoter.com" target="_blank" ><img onmouseover="this.src='imgh/14.jpg';" onmouseout="this.src='img/14.jpg';" src="img/14.jpg" id="pequeña2"></a></div>
+        </div>
+        <div class='row'>
         <div class='col-xs-4 col-sm-2'><a href="https://forms.office.com/r/4TwDuQPLHm" target="_blank" ><img onmouseover="this.src='imgh/18.png';" onmouseout="this.src='img/18.png';" src="img/18.png" id="pequeña2"></a></div>
+        <div class='col-xs-4 col-sm-2'><a href="https://app.relojcontrol.com" target="_blank" ><img onmouseover="this.src='imgh/15.jpg';" onmouseout="this.src='img/15.jpg';" src="img/15.jpg" id="pequeña2"></a></div>     
+        
 	</div>
 
 
