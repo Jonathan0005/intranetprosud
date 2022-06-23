@@ -103,21 +103,21 @@ header("Location: ../index.php");
                 <section class="content-header">
                     <h1>
                         RindePro
-                        <small>Aprobar Rendiciones</small>
+                        <small>Creacion de Nominas</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li>
                             <a href="dashboard.php"><i class="fa fa-dashboard"></i> Home</a>
                         </li>
                         <li><a href="#">RindePro</a></li>
-                        <li class="active">Aprobar Rendiciones</li>
+                        <li class="active">Creacion de Nominas</li>
                     </ol>
                 </section>
                 <!-- Main content -->
                 <section class="content">
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Rendiciones por Aprobar</h3>
+                            <h3 class="box-title">Crear Nomina</h3>
                             <div class="box-tools pull-right"></div>
                         </div>
                         <div class="box-body">
@@ -129,6 +129,7 @@ header("Location: ../index.php");
                                     <table id="tbl_rendiciones_aprobar" class="responsive display nowrap" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
+                                                <th><th>
                                                 <th data-priority="1">ID gasto</th>
                                                 <th>Persona</th>
                                                 <th>Fecha</th>
@@ -296,7 +297,7 @@ header("Location: ../index.php");
                 { responsivePriority: 2, targets: 5 },
             ],
             ajax: {
-                url: "../controller/get_rendiciones_aprobar.php", // json datasource
+                url: "../controller/get_rendi_nomina.php", // json datasource
                 type: "post", // method  , by default get
                 error: function () {
                     // error handling
@@ -305,4 +306,3 @@ header("Location: ../index.php");
         });
     });
 </script>
-

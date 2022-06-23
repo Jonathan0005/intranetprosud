@@ -45,14 +45,14 @@ header("Location: ../index.php");
     // getting total number records without any search
 $sql= ""; 
 
-    $sql = "select distinct a.id,concat('[',b.rut_empleado,'] ', b.nombre_empleado) as persona, a.rendi_fecha, a.cuenta_contable, a.tipo_doc, a.rendi_detalle, a.rendi_monto, a.rendi_estado FROM vw_rendiciones a inner join vw_talana_jefaturas b on a.rut = b.rut_empleado where a.rendi_estado = 'SIN APROBAR' and b.rut_jefatura = '".$valida_id."'";
+    $sql = "select distinct a.id,concat('[',b.rut_empleado,'] ', b.nombre_empleado) as persona, a.rendi_fecha, a.cuenta_contable, a.tipo_doc, a.rendi_detalle, a.rendi_monto, a.rendi_estado FROM vw_rendiciones a inner join vw_talana_jefaturas b on a.rut = b.rut_empleado inner join vw_talana_gerentes c on b.rut_jefatura = c.rut_jefe where a.rendi_estado = 'APROBADO TESORERIA' and c.rut_gerente = '".$valida_id."'";
 
 $query=mysqli_query($conn, $sql);
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  	
 
 
-    $sql = "select distinct a.id,concat('[',b.rut_empleado,'] ', b.nombre_empleado) as persona, a.rendi_fecha, a.cuenta_contable, a.tipo_doc, a.rendi_detalle, a.rendi_monto, a.rendi_estado FROM vw_rendiciones a inner join vw_talana_jefaturas b on a.rut = b.rut_empleado where a.rendi_estado = 'SIN APROBAR' and b.rut_jefatura = '".$valida_id."'";
+    $sql = "select distinct a.id,concat('[',b.rut_empleado,'] ', b.nombre_empleado) as persona, a.rendi_fecha, a.cuenta_contable, a.tipo_doc, a.rendi_detalle, a.rendi_monto, a.rendi_estado FROM vw_rendiciones a inner join vw_talana_jefaturas b on a.rut = b.rut_empleado inner join vw_talana_gerentes c on b.rut_jefatura = c.rut_jefe where a.rendi_estado = 'APROBADO TESORERIA' and c.rut_gerente = '".$valida_id."'";
     $sql.=" ORDER BY id";
 
     //$sql.=" ORDER BY estado ";
@@ -74,7 +74,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
     $nestedData[] = $row["rendi_estado"];
     $nestedData[] = '<td>
                          <a href="../views/fotos_rendiciones_aprobadas.php?ID='.$row['id'].'" class="btn btn-sm btn-primary"><i class="fa fa-fw fa-image"></i></a>
-                         <a href="../controller/rendicion_aprobar.php?ID='.$row['id'].'" class="btn btn-sm btn-success"><i class="fa fa-fw fa-thumbs-o-up"></i> Aprobar</a>
+                         <a href="../controller/rendicion_post_aprovar.php?ID='.$row['id'].'" class="btn btn-sm btn-success"><i class="fa fa-fw fa-thumbs-o-up"></i> Aprobar</a>
                          <a href="../controller/rendicion_rechazar.php?ID='.$row['id'].'" class="btn btn-sm btn-danger"><i class="fa fa-fw fa-thumbs-o-down"></i> Rechazar</a>
                      </td></tr>';	
 	

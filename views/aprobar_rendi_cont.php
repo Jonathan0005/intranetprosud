@@ -103,14 +103,14 @@ header("Location: ../index.php");
                 <section class="content-header">
                     <h1>
                         RindePro
-                        <small>Aprobar Rendiciones</small>
+                        <small>Aprobar Rendiciones Contable</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li>
                             <a href="dashboard.php"><i class="fa fa-dashboard"></i> Home</a>
                         </li>
                         <li><a href="#">RindePro</a></li>
-                        <li class="active">Aprobar Rendiciones</li>
+                        <li class="active">Aprobar Rendiciones Contable</li>
                     </ol>
                 </section>
                 <!-- Main content -->
@@ -296,7 +296,7 @@ header("Location: ../index.php");
                 { responsivePriority: 2, targets: 5 },
             ],
             ajax: {
-                url: "../controller/get_rendiciones_aprobar.php", // json datasource
+                url: "../controller/get_rendi_cont.php", // json datasource
                 type: "post", // method  , by default get
                 error: function () {
                     // error handling

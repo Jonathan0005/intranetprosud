@@ -7,15 +7,8 @@ $id = $_GET['ID'];
 
 
 
-$query = "";
-if ($valida_id == '186959329')
-{
-$query = "update rendicion set rendi_estado = 3 where id = '$id'";
-}
-else
-{
 $query = "update rendicion set rendi_estado = 2 where id = '$id'";
-}
+
 $resultado = mysqli_query($conn, $query);
 
 
